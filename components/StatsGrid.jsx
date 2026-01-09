@@ -1,16 +1,15 @@
-
 import React from 'react';
 import { DollarSign, Users, UserMinus, ShoppingCart } from 'lucide-react';
 import { MOCK_METRICS, TrendIcon } from '../constants';
 
-const iconMap: Record<string, any> = {
+const iconMap = {
   DollarSign,
   Users,
   UserMinus,
   ShoppingCart
 };
 
-const StatsGrid: React.FC = () => {
+const StatsGrid = () => {
   return (
     <div className="stats-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
       {MOCK_METRICS.map((metric, index) => {
