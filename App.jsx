@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import DashboardHeader from './components/DashboardHeader';
@@ -6,7 +5,7 @@ import StatsGrid from './components/StatsGrid';
 import MainChartArea from './components/MainChartArea';
 import { NAV_ITEMS } from './constants';
 
-const App: React.FC = () => {
+const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isMobile, setIsMobile] = useState(false);
@@ -72,7 +71,7 @@ const App: React.FC = () => {
           {/* Visualization Section */}
           <MainChartArea />
 
-          {/* Sample Table Section (Optional additional content) */}
+          {/* Sample Table Section */}
           <div className="mt-8 bg-white rounded-xl border border-slate-200 overflow-hidden">
             <div className="p-6 border-b border-slate-100 flex items-center justify-between">
               <h3 className="font-bold text-slate-900 text-lg">Recent Transactions</h3>
@@ -119,7 +118,6 @@ const App: React.FC = () => {
           </div>
         </main>
 
-        {/* Sticky Footer CTA */}
         <footer className="mt-auto p-4 border-t border-slate-200 bg-white sticky bottom-0 z-10 flex items-center justify-between">
           <p className="text-xs text-slate-400">© 2024 Insight SaaS Analytics Platform. All rights reserved.</p>
           <div className="flex gap-4">
