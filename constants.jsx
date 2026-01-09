@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   LayoutDashboard, 
@@ -12,9 +11,8 @@ import {
   TrendingDown,
   Minus
 } from 'lucide-react';
-import { NavItem, Metric, ChartDataPoint } from './types';
 
-export const NAV_ITEMS: NavItem[] = [
+export const NAV_ITEMS = [
   { id: 'dashboard', label: 'Dashboard', iconName: 'LayoutDashboard' },
   { id: 'analytics', label: 'Analytics', iconName: 'BarChart3' },
   { id: 'customers', label: 'Customers', iconName: 'Users' },
@@ -23,14 +21,14 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'settings', label: 'Settings', iconName: 'Settings' },
 ];
 
-export const MOCK_METRICS: Metric[] = [
+export const MOCK_METRICS = [
   { label: 'Total Revenue', value: '$128,430', change: '+12.5%', trend: 'up', icon: 'DollarSign' },
   { label: 'Active Users', value: '2,420', change: '+18.2%', trend: 'up', icon: 'Users' },
   { label: 'Churn Rate', value: '2.4%', change: '-0.8%', trend: 'down', icon: 'UserMinus' },
   { label: 'Avg. Order Value', value: '$42.50', change: '+3.1%', trend: 'up', icon: 'ShoppingCart' },
 ];
 
-export const MOCK_CHART_DATA: ChartDataPoint[] = [
+export const MOCK_CHART_DATA = [
   { name: 'Jan', revenue: 4000, users: 2400 },
   { name: 'Feb', revenue: 3000, users: 1398 },
   { name: 'Mar', revenue: 2000, users: 9800 },
@@ -40,7 +38,7 @@ export const MOCK_CHART_DATA: ChartDataPoint[] = [
   { name: 'Jul', revenue: 3490, users: 4300 },
 ];
 
-export const TrendIcon = ({ trend }: { trend: Metric['trend'] }) => {
+export const TrendIcon = ({ trend }) => {
   switch (trend) {
     case 'up': return <TrendingUp className="w-4 h-4 text-emerald-500" />;
     case 'down': return <TrendingDown className="w-4 h-4 text-rose-500" />;
