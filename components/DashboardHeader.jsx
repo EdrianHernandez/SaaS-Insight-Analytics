@@ -1,13 +1,13 @@
-
 import React from 'react';
 import { Search, Bell, Menu, User } from 'lucide-react';
 
-interface DashboardHeaderProps {
-  onMenuClick: () => void;
-  title: string;
-}
-
-const DashboardHeader: React.FC<DashboardHeaderProps> = ({ onMenuClick, title }) => {
+/**
+ * DashboardHeader component providing navigation toggle, title, search, and user profile.
+ * @param {Object} props
+ * @param {Function} props.onMenuClick - Callback to toggle the sidebar
+ * @param {string} props.title - The title to display in the header
+ */
+const DashboardHeader = ({ onMenuClick, title }) => {
   return (
     <header className="dashboard-header h-16 bg-white border-b border-slate-200 flex items-center justify-between px-4 sticky top-0 z-40 backdrop-blur-sm bg-white/80">
       <div className="flex items-center gap-4">
