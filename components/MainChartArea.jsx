@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   AreaChart, 
@@ -14,7 +13,7 @@ import {
 } from 'recharts';
 import { MOCK_CHART_DATA } from '../constants';
 
-const MainChartArea: React.FC = () => {
+const MainChartArea = () => {
   return (
     <div className="main-chart-area grid grid-cols-1 lg:grid-cols-3 gap-6">
       {/* Revenue Trend Area Chart */}
