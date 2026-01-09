@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   LayoutDashboard, 
@@ -13,14 +12,7 @@ import {
 } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 
-interface SidebarProps {
-  isOpen: boolean;
-  setIsOpen: (val: boolean) => void;
-  activeTab: string;
-  setActiveTab: (val: string) => void;
-}
-
-const iconMap: Record<string, any> = {
+const iconMap = {
   LayoutDashboard,
   Users,
   CreditCard,
@@ -29,7 +21,15 @@ const iconMap: Record<string, any> = {
   MessageSquare
 };
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen, activeTab, setActiveTab }) => {
+/**
+ * Sidebar component for main navigation.
+ * @param {Object} props
+ * @param {boolean} props.isOpen - Sidebar expansion state
+ * @param {Function} props.setIsOpen - Function to toggle expansion
+ * @param {string} props.activeTab - Current active navigation ID
+ * @param {Function} props.setActiveTab - Function to change active tab
+ */
+const Sidebar = ({ isOpen, setIsOpen, activeTab, setActiveTab }) => {
   return (
     <aside 
       className={`sidebar-container fixed top-0 left-0 h-full bg-slate-900 text-slate-300 transition-all duration-300 ease-in-out z-50 flex flex-col ${
